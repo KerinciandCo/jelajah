@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kerinci & Co - Jelajahi Alam Kerinci</title>
+    
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/logo-rounded.png" type="image/png">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="font-sans antialiased bg-gray-50 transition-colors duration-300">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 rounded-lg overflow-hidden bg-white/10 flex items-center justify-center">
+                        <img src="images/logo.png" alt="Kerinci logo" class="w-full h-full object-cover">
+                    </div>
+                    <span class="text-2xl font-bold text-white" id="nav-logo-text">Kerinci & Co.</span>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link text-white hover:text-primary-300 transition font-medium">Beranda</a>
+                    <a href="#destinasi" class="nav-link text-white hover:text-primary-300 transition font-medium">Destinasi</a>
+                    <a href="#paket" class="nav-link text-white hover:text-primary-300 transition font-medium">Paket Wisata</a>
+                    <a href="#sewa" class="nav-link text-white hover:text-primary-300 transition font-medium">Sewa Alat</a>
+                    <a href="#event" class="nav-link text-white hover:text-primary-300 transition font-medium">Event</a>
+                    <a href="#galeri" class="nav-link text-white hover:text-primary-300 transition font-medium">Galeri</a>
+                    <a href="#cuaca" class="nav-link text-white hover:text-primary-300 transition font-medium">Cuaca</a>
+                </div>
+
+                <div class="flex items-center space-x-4">
+                    <button class="md:hidden p-2 text-white" id="mobileMenuBtn">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white dark:bg-gray-800 shadow-lg absolute w-full">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#home" class="block px-3 py-2 text-gray-800 dark:text-white hover:bg-primary-50 dark:hover:bg-gray-700 rounded">Beranda</a>
+                <a href="#destinasi" class="block px-3 py-2 text-gray-800 dark:text-white hover:bg-primary-50 dark:hover:bg-gray-700 rounded">Destinasi</a>
+                <a href="#paket" class="block px-3 py-2 text-gray-800 dark:text-white hover:bg-primary-50 dark:hover:bg-gray-700 rounded">Paket Wisata</a>
+                <a href="#sewa" class="block px-3 py-2 text-gray-800 dark:text-white hover:bg-primary-50 dark:hover:bg-gray-700 rounded">Sewa Alat</a>
+                <a href="#event" class="block px-3 py-2 text-gray-800 dark:text-white hover:bg-primary-50 dark:hover:bg-gray-700 rounded">Event</a>
+                <a href="#galeri" class="block px-3 py-2 text-gray-800 dark:text-white hover:bg-primary-50 dark:hover:bg-gray-700 rounded">Galeri</a>
+                <a href="#cuaca" class="block px-3 py-2 text-gray-800 dark:text-white hover:bg-primary-50 dark:hover:bg-gray-700 rounded">Cuaca</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://zjglidcehtsqqqhbdxyp.supabase.co/storage/v1/object/public/atourin/images/destination/kerinci/rawa-bento-profile1640676653.png?x-image-process=image/resize,p_100,limit_1/imageslim" alt="Gunung Kerinci" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60"></div>
+        </div>
+
+        <div class="absolute inset-0 hero-pattern z-0 opacity-30"></div>
+
+        <div class="relative z-10 text-center px-4 max-w-5xl mx-auto">
+            <div class="mb-6 inline-block animate-fade-in-up">
+                <span class="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium border border-white/30">
+                    <i class="fas fa-map-marker-alt mr-2 text-secondary-500"></i>Jambi, Sumatera, Indonesia
+                </span>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight animate-fade-in-up" style="animation-delay: 0.2s">
+                Jelajahi Keindahan<br>
+                <span class="text-gradient">Alam Kerinci</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-200 mb-10 max-w-3xl mx-auto animate-fade-in-up" style="animation-delay: 0.4s">
+                Petualangan tak terlupakan menanti Anda. 
+                Rasakan berbagai sensasi dengan panorama spektakuler.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up" style="animation-delay: 0.6s">
+                <a href="#destinasi" class="px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white rounded-full font-semibold text-lg transition transform hover:scale-105 flex items-center justify-center gap-2">
+                    <i class="fas fa-compass"></i>
+                    Jelajahi Sekarang
+                </a>
+                <button onclick="playVideo()" class="px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white border border-white/30 rounded-full font-semibold text-lg transition flex items-center justify-center gap-2">
+                    <i class="fas fa-play-circle"></i>
+                    Tonton Video
+                </button>
+            </div>
+
+            <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 animate-fade-in-up" style="animation-delay: 0.8s">
+                <div class="glass-effect rounded-2xl p-4 text-white">
+                    <div class="text-3xl font-bold">3.805</div>
+                    <div class="text-sm opacity-80">Meter diatas permukaan laut</div>
+                </div>
+                <div class="glass-effect rounded-2xl p-4 text-white">
+                    <div class="text-3xl font-bold">20+</div>
+                    <div class="text-sm opacity-80">Destinasi Wisata Alam</div>
+                </div>
+                <div class="glass-effect rounded-2xl p-4 text-white">
+                    <div class="text-3xl font-bold">10K+</div>
+                    <div class="text-sm opacity-80">Pengunjung/Tahun</div>
+                </div>
+                <div class="glass-effect rounded-2xl p-4 text-white">
+                    <div class="text-3xl font-bold">4.5</div>
+                    <div class="text-sm opacity-80">Rating Wisatawan</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#overview" class="text-white opacity-70 hover:opacity-100 transition">
+                <i class="fas fa-chevron-down text-3xl"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section id="overview" class="py-20 bg-white dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <h2 class="text-4xl font-bold text-gray-900 dark:text-white">
+                        Surga Tersembunyi di <span class="text-primary-600">Sumatera</span>
+                    </h2>
+                    <p class="text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
+                        Taman Nasional Kerinci Seblat merupakan salah satu warisan alam terbesar di Indonesia. 
+                        Dengan keanekaragaman hayati yang luar biasa, mulai dari flora langka seperti bunga Raflesia 
+                        hingga fauna eksotis seperti harimau Sumatera dan badak Sumatera.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-12 h-12 bg-primary-100 dark:bg-primary-900 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-tree text-primary-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 dark:text-white">Hutan Tropis</h4>
+                                <p class="text-sm text-gray-500 dark:text-gray-400">Ekosystem asli Sumatera</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-12 h-12 bg-secondary-100 dark:bg-secondary-900 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-fire text-secondary-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 dark:text-white">Gunung Berapi</h4>
+                                <p class="text-sm text-gray-500 dark:text-gray-400">Aktif dengan kawah indah</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-water text-blue-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 dark:text-white">Air Terjun</h4>
+                                <p class="text-sm text-gray-500 dark:text-gray-400">Belasan air terjun spektakuler</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-12 h-12 bg-purple-100 dark:bg-purple-900 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-paw text-purple-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 dark:text-white">Hamparan Perkebunan Teh</h4>
+                                <p class="text-sm text-gray-500 dark:text-gray-400">Tertua SeIndonesia(1925)<br>2500 Ha</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="grid grid-cols-2 gap-4">
+                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&q=80" class="rounded-2xl shadow-lg transform translate-y-8" alt="Pemandangan Kerinci">
+                        <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=400&q=80" class="rounded-2xl shadow-lg" alt="Gunung Kerinci">
+                    </div>
+                    <div class="absolute -bottom-6 -left-6 bg-white dark:bg-gray-700 p-4 rounded-2xl shadow-xl">
+                        <div class="flex items-center space-x-2">
+                            <div class="flex -space-x-2">
+                                <img class="w-8 h-8 rounded-full border-2 border-white" src="https://i.pravatar.cc/100?img=1" alt="User">
+                                <img class="w-8 h-8 rounded-full border-2 border-white" src="https://i.pravatar.cc/100?img=2" alt="User">
+                                <img class="w-8 h-8 rounded-full border-2 border-white" src="https://i.pravatar.cc/100?img=3" alt="User">
+                            </div>
+                            <div class="text-sm">
+                                <p class="font-semibold text-gray-900 dark:text-white">2,000+ Travelers</p>
+                                <p class="text-gray-500 dark:text-gray-400">Sudah berkunjung</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destinasi Populer -->
+    <section id="destinasi" class="py-20 bg-gray-50 dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Destinasi Populer</h2>
+                <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">Pilih destinasi terbaik untuk petualangan Anda di Kerinci</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg card-hover bg-white dark:bg-gray-800">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://asset.kompas.com/crops/IM-dEVj1p1W7JDSPG2dO_7fOTa8=/0x0:800x533/750x500/data/photo/2022/08/04/62eb270149f0c.jpg" alt="Gunung Kerinci" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                        <div class="absolute top-4 right-4 bg-white/90 dark:bg-gray-800/90 px-3 py-1 rounded-full text-sm font-semibold text-primary-600">
+                            <i class="fas fa-star text-yellow-400 mr-1"></i> 4.9
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white">Gunung Kerinci</h3>
+                            <span class="text-primary-600 font-bold">Rp 350K</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Pendakian ke puncak tertinggi Sumatera dengan pemandangan kawah yang memukau.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center text-sm text-gray-500 dark:text-gray-400">
+                                <i class="fas fa-clock mr-2"></i> 2-3 Hari
+                            </div>
+                            <div class="flex items-center text-sm text-gray-500 dark:text-gray-400">
+                                <i class="fas fa-hiking mr-2"></i> Hard
+                            </div>
+                        </div>
+                        <button onclick="showDetail('kerinci')" class="mt-4 w-full py-2 border-2 border-primary-600 text-primary-600 rounded-lg hover:bg-primary-600 hover:text-white transition font-semibold">
+                            Lihat Detail
+                        </button>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg card-hover bg-white dark:bg-gray-800">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://www.len-diary.com/wp-content/uploads/2019/03/air-terjun-telun-berasap-900x500.jpg" alt="Air Terjun" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                        <div class="absolute top-4 right-4 bg-white/90 dark:bg-gray-800/90 px-3 py-1 rounded-full text-sm font-semibold text-primary-600">
+                            <i class="fas fa-star text-yellow-400 mr-1"></i> 4.8
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white">Air Terjun Telun Berasap</h3>
+                            <span class="text-primary-600 font-bold">Rp 50K</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Air terjun eksotis dengan ketinggian 50 meter dikelilingi hutan tropis.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center text-sm text-gray-500 dark:text-gray-400">
+                                <i class="fas fa-clock mr-2"></i> 3-4 Jam
+                            </div>
+                            <div class="flex items-center text-sm text-gray-500 dark:text-gray-400">
+                                <i class="fas fa-walking mr-2"></i> Easy
+                            </div>
+                        </div>
+                        <button onclick="showDetail('telun')" class="mt-4 w-full py-2 border-2 border-primary-600 text-primary-600 rounded-lg hover:bg-primary-600 hover:text-white transition font-semibold">
+                            Lihat Detail
+                        </button>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg card-hover bg-white dark:bg-gray-800">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://assets.promediateknologi.id/crop/0x0:0x0/1200x0/webp/photo/p1/591/2023/10/03/IMG_20231003_205053_700_x_400_piksel-94021809.jpg" alt="Danau" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                        <div class="absolute top-4 right-4 bg-white/90 dark:bg-gray-800/90 px-3 py-1 rounded-full text-sm font-semibold text-primary-600">
+                            <i class="fas fa-star text-yellow-400 mr-1"></i> 4.7
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white">Danau Kaco</h3>
+                            <span class="text-primary-600 font-bold">Rp 100K</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Danau biru kristal di tengah hutan dengan legenda misterius.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center text-sm text-gray-500 dark:text-gray-400">
+                                <i class="fas fa-clock mr-2"></i> 1 Hari
+                            </div>
+                            <div class="flex items-center text-sm text-gray-500 dark:text-gray-400">
+                                <i class="fas fa-hiking mr-2"></i> Medium
+                            </div>
+                        </div>
+                        <button onclick="showDetail('kaco')" class="mt-4 w-full py-2 border-2 border-primary-600 text-primary-600 rounded-lg hover:bg-primary-600 hover:text-white transition font-semibold">
+                            Lihat Detail
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="all-destinasi.html" class="inline-flex items-center px-6 py-3 bg-primary-600 text-white rounded-full hover:bg-primary-700 transition font-semibold">
+                    Lihat Semua Destinasi
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Paket Wisata -->
+    <section id="paket" class="py-20 bg-white dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Paket Wisata</h2>
+                <p class="text-gray-600 dark:text-gray-400">Pilih paket yang sesuai dengan kebutuhan petualangan Anda</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="border-2 border-gray-200 dark:border-gray-700 rounded-2xl p-8 hover:border-primary-500 transition bg-white dark:bg-gray-800">
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">Paket Basic</h3>
+                        <div class="text-4xl font-bold text-primary-600 mb-2">Rp 1.5jt</div>
+                        <p class="text-gray-500 dark:text-gray-400">per orang</p>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center text-gray-600 dark:text-gray-300">
+                            <i class="fas fa-check text-primary-500 mr-3"></i> 2 Hari 1 Malam
+                        </li>
+                        <li class="flex items-center text-gray-600 dark:text-gray-300">
+                            <i class="fas fa-check text-primary-500 mr-3"></i> Homestay
+                        </li>
+                        <li class="flex items-center text-gray-600 dark:text-gray-300">
+                            <i class="fas fa-check text-primary-500 mr-3"></i> 1 Destinasi
+                        </li>
+                        <li class="flex items-center text-gray-600 dark:text-gray-300">
+                            <i class="fas fa-check text-primary-500 mr-3"></i> Makan 3x
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <i class="fas fa-times mr-3"></i> Guide Profesional
+                        </li>
+                    </ul>
+                    <button class="w-full py-3 border-2 border-primary-600 text-primary-600 rounded-xl font-semibold hover:bg-primary-600 hover:text-white transition">
+                        Pilih Paket
+                    </button>
+                </div>
+
+                <div class="border-2 border-primary-500 rounded-2xl p-8 relative bg-primary-50 dark:bg-gray-800 transform scale-105 shadow-xl">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-secondary-500 text-white px-4 py-1 rounded-full text-sm font-bold">
+                        POPULER
+                    </div>
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">Paket Adventure</h3>
+                        <div class="text-4xl font-bold text-primary-600 mb-2">Rp 3.5jt</div>
+                        <p class="text-gray-500 dark:text-gray-400">per orang</p>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center text-gray-600 dark:text-gray-300">
+                            <i class="fas fa-check text-primary-500 mr-3"></i> 3 Hari 2 Malam
+                        </li>
+                        <li class="flex items-center text-gray-600 dark:text-gray-300">
+                            <i class="fas fa-check text-primary-500 mr-3"></i> Hotel Bintang 3
+                        </li>
+                        <li class="flex items-center text-gray-600 dark:text-gray-300">
+                            <i class="fas fa-check text-primary-500 mr-3"></i> 3 Destinasi
+                        </li>
+                        <li class="flex items-center text-gray-600 dark:text-gray-300">
+                            <i class="fas fa-check text-primary-500 mr-3"></i> Full Board Meals
+                        </li>
+                        <li class="flex items-center text-gray-600 dark:text-gray-300">
+                            <i class="fas fa-check text-primary-500 mr-3"></i> Guide & Porter
+                        </li>
+                    </ul>
+                    <button class="w-full py-3 bg-primary-600 text-white rounded-xl font-semibold hover:bg-primary-700 transition shadow-lg">
+                        Pilih Paket
+                    </button>
+                </div>
+
+                <div class="border-2 border-gray-200 dark:border-gray-700 rounded-2xl p-8 hover:border-primary-500 transition bg-white dark:bg-gray-800">
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">Paket Premium</h3>
+                        <div class="text-4xl font-bold text-primary-600 mb-2">Rp 7jt</div>
+                        <p class="text-gray-500 dark:text-gray-400">per orang</p>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center text-gray-600 dark:text-gray-300">
+                            <i class="fas fa-check text-primary-500 mr-3"></i> 5 Hari 4 Malam
+                        </li>
+                        <li class="flex items-center text-gray-600 dark:text-gray-300">
+                            <i class="fas fa-check text-primary-500 mr-3"></i> Resort Eksklusif
+                        </li>
+                        <li class="flex items-center text-gray-600 dark:text-gray-300">
+                            <i class="fas fa-check text-primary-500 mr-3"></i> All Destinasi
+                        </li>
+                        <li class="flex items-center text-gray-600 dark:text-gray-300">
+                            <i class="fas fa-check text-primary-500 mr-3"></i> Gourmet Dining
+                        </li>
+                        <li class="flex items-center text-gray-600 dark:text-gray-300">
+                            <i class="fas fa-check text-primary-500 mr-3"></i> Private Guide
+                        </li>
+                    </ul>
+                    <button class="w-full py-3 border-2 border-primary-600 text-primary-600 rounded-xl font-semibold hover:bg-primary-600 hover:text-white transition">
+                        Pilih Paket
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sewa Peralatan -->
+    <section id="sewa" class="py-20 bg-gray-50 dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Sewa Peralatan</h2>
+                <p class="text-gray-600 dark:text-gray-400">Peralatan berkualitas untuk kenyamanan petualangan Anda</p>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-xl transition group">
+                    <div class="w-full h-48 bg-gray-100 dark:bg-gray-700 rounded-xl mb-4 flex items-center justify-center group-hover:scale-105 transition">
+                        <i class="fas fa-campground text-6xl text-primary-500"></i>
+                    </div>
+                    <h4 class="font-bold text-lg text-gray-900 dark:text-white mb-2">Tenda 4 Orang</h4>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm mb-3">Tenda waterproof, anti angin</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-primary-600 font-bold">Rp 150K/hari</span>
+                        <button class="px-4 py-2 bg-primary-100 dark:bg-primary-900 text-primary-600 rounded-lg text-sm font-semibold hover:bg-primary-200 transition">
+                            Sewa
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-xl transition group">
+                    <div class="w-full h-48 bg-gray-100 dark:bg-gray-700 rounded-xl mb-4 flex items-center justify-center group-hover:scale-105 transition">
+                        <i class="fas fa-hiking text-6xl text-secondary-500"></i>
+                    </div>
+                    <h4 class="font-bold text-lg text-gray-900 dark:text-white mb-2">Carrier 60L</h4>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm mb-3">Carrier osprey, fit back system</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-primary-600 font-bold">Rp 75K/hari</span>
+                        <button class="px-4 py-2 bg-primary-100 dark:bg-primary-900 text-primary-600 rounded-lg text-sm font-semibold hover:bg-primary-200 transition">
+                            Sewa
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-xl transition group">
+                    <div class="w-full h-48 bg-gray-100 dark:bg-gray-700 rounded-xl mb-4 flex items-center justify-center group-hover:scale-105 transition">
+                        <i class="fas fa-fire text-6xl text-orange-500"></i>
+                    </div>
+                    <h4 class="font-bold text-lg text-gray-900 dark:text-white mb-2">Cooking Set</h4>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm mb-3">Kompor gas + peralatan masak</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-primary-600 font-bold">Rp 50K/hari</span>
+                        <button class="px-4 py-2 bg-primary-100 dark:bg-primary-900 text-primary-600 rounded-lg text-sm font-semibold hover:bg-primary-200 transition">
+                            Sewa
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-xl transition group">
+                    <div class="w-full h-48 bg-gray-100 dark:bg-gray-700 rounded-xl mb-4 flex items-center justify-center group-hover:scale-105 transition">
+                        <i class="fas fa-bed text-6xl text-blue-500"></i>
+                    </div>
+                    <h4 class="font-bold text-lg text-gray-900 dark:text-white mb-2">Sleeping Bag</h4>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm mb-3">SB waterproof, -5°C comfort</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-primary-600 font-bold">Rp 40K/hari</span>
+                        <button class="px-4 py-2 bg-primary-100 dark:bg-primary-900 text-primary-600 rounded-lg text-sm font-semibold hover:bg-primary-200 transition">
+                            Sewa
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 bg-primary-600 rounded-2xl p-8 text-white text-center">
+                <h3 class="text-2xl font-bold mb-4">Butuh Paket Lengkap?</h3>
+                <p class="mb-6">Dapatkan diskon 20% untuk penyewaan paket peralatan lengkap</p>
+                <button class="px-8 py-3 bg-white text-primary-600 rounded-full font-bold hover:bg-gray-100 transition">
+                    Lihat Paket Lengkap
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Section -->
+    <section id="event" class="py-20 bg-gradient-to-r from-primary-600 to-primary-800 text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+        <img src="images/gunung7.png" alt="Event Kerinci" class="w-full h-full object-cover">
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-12">
+                <div class="inline-block px-4 py-2 bg-white/20 rounded-full text-sm font-semibold mb-4">
+                    <i class="fas fa-calendar-check mr-2"></i>Event Mendatang
+                </div>
+                <h2 class="text-4xl md:text-5xl font-bold">Jadwal Event Kerinci</h2>
+                <p class="max-w-2xl mx-auto text-lg opacity-90 mt-4">Temukan event alam yang akan berlangsung di Kerinci. Satu event utama dengan hitungan mundur dan event-event lain dalam format ringkas.</p>
+            </div>
+
+            <div class="grid gap-8 lg:grid-cols-[1.6fr_1fr] items-stretch">
+                <div class="relative bg-slate-950/85 border border-white/15 rounded-[2rem] p-10 shadow-2xl overflow-hidden backdrop-blur-xl hover:bg-slate-950/95 hover:shadow-3xl hover:scale-[1.02] transition-all duration-500 group">
+                    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(255,255,255,0.12),_transparent_40%)] group-hover:bg-[radial-gradient(circle_at_top_right,_rgba(255,255,255,0.20),_transparent_40%)] transition-all duration-500"></div>
+                    <div class="relative z-10">
+                        <div class="inline-flex items-center gap-3 px-4 py-2 bg-gradient-to-r from-secondary-500/20 to-secondary-600/20 text-secondary-100 rounded-full text-sm font-semibold mb-6 border border-secondary-400/30">
+                            <i class="fas fa-star animate-pulse"></i>Event Utama</div>
+                        <h3 class="text-5xl font-bold mb-4 group-hover:text-white transition-colors duration-300">Festival Alam Kerinci</h3>
+                        <p class="text-lg mb-6 opacity-90 group-hover:opacity-100 transition-opacity duration-300">Event khusus untuk menikmati keindahan alam Kerinci dengan trekking, workshop budaya, dan pasar lokal.</p>
+
+                        <div class="flex flex-wrap gap-4 mb-8 text-sm opacity-85">
+                            <div class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 px-4 py-3 rounded-2xl transition-all duration-300 hover:scale-105">
+                                <i class="fas fa-calendar-alt"></i> 15 Mei 2026
+                            </div>
+                            <div class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 px-4 py-3 rounded-2xl transition-all duration-300 hover:scale-105">
+                                <i class="fas fa-map-marker-alt"></i> Desa Sungaipenuh
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8" id="countdown">
+                            <div class="bg-white/10 border border-white/20 rounded-3xl p-5 text-center hover:bg-white/20 transition-all duration-300 hover:scale-110 hover:shadow-lg">
+                                <div class="text-4xl font-bold" id="days">00</div>
+                                <div class="text-sm opacity-80">Hari</div>
+                            </div>
+                            <div class="bg-white/10 border border-white/20 rounded-3xl p-5 text-center hover:bg-white/20 transition-all duration-300 hover:scale-110 hover:shadow-lg">
+                                <div class="text-4xl font-bold" id="hours">00</div>
+                                <div class="text-sm opacity-80">Jam</div>
+                            </div>
+                            <div class="bg-white/10 border border-white/20 rounded-3xl p-5 text-center hover:bg-white/20 transition-all duration-300 hover:scale-110 hover:shadow-lg">
+                                <div class="text-4xl font-bold" id="minutes">00</div>
+                                <div class="text-sm opacity-80">Menit</div>
+                            </div>
+                            <div class="bg-white/10 border border-white/20 rounded-3xl p-5 text-center hover:bg-white/20 transition-all duration-300 hover:scale-110 hover:shadow-lg">
+                                <div class="text-4xl font-bold" id="seconds">00</div>
+                                <div class="text-sm opacity-80">Detik</div>
+                            </div>
+                        </div>
+
+                        <button class="px-8 py-4 bg-gradient-to-r from-secondary-500 to-secondary-600 hover:from-secondary-600 hover:to-secondary-700 text-white rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl shadow-lg">Selengkapnya</button>
+                    </div>
+                </div>
+
+                <div class="grid gap-6">
+                    <article class="bg-slate-950/85 border border-white/15 rounded-[2rem] p-7 shadow-2xl overflow-hidden backdrop-blur-xl hover:bg-slate-950/95 hover:shadow-3xl hover:scale-[1.02] transition-all duration-500 group">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-sm uppercase tracking-[0.2em] text-secondary-100 font-semibold bg-secondary-500/20 px-3 py-1 rounded-full border border-secondary-400/30">Event Kecil</span>
+                            <span class="text-xs bg-white/10 hover:bg-white/20 rounded-full px-3 py-1 transition-all duration-300">28 Juni 2026</span>
+                        </div>
+                        <h4 class="text-2xl font-bold mb-3 group-hover:text-white transition-colors duration-300">Workshop Fotografi Alam</h4>
+                        <p class="text-sm opacity-80 mb-5 group-hover:opacity-100 transition-opacity duration-300">Pelajari teknik foto landscape dan astro photography di area perkebunan teh.</p>
+                        <div class="inline-flex items-center gap-2 text-sm opacity-85 hover:opacity-100 transition-opacity duration-300">
+                            <i class="fas fa-map-marker-alt"></i> Area Teh Kayu Aro
+                        </div>
+                    </article>
+
+                    <article class="bg-white/10 border border-white/20 rounded-[2rem] p-7 shadow-xl overflow-hidden backdrop-blur-sm hover:bg-white/15 hover:shadow-2xl hover:scale-[1.02] transition-all duration-500 group">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-sm uppercase tracking-[0.2em] text-secondary-100 font-semibold bg-secondary-500/20 px-3 py-1 rounded-full border border-secondary-400/30">Event Kecil</span>
+                            <span class="text-xs bg-white/10 hover:bg-white/20 rounded-full px-3 py-1 transition-all duration-300">5 Juli 2026</span>
+                        </div>
+                        <h4 class="text-2xl font-bold mb-3 group-hover:text-white transition-colors duration-300">Pendakian Sunrise</h4>
+                        <p class="text-sm opacity-80 mb-5 group-hover:opacity-100 transition-opacity duration-300">Pendakian pagi menuju puncak untuk menyaksikan matahari terbit di Gunung Kerinci.</p>
+                        <div class="inline-flex items-center gap-2 text-sm opacity-85 hover:opacity-100 transition-opacity duration-300">
+                            <i class="fas fa-map-marker-alt"></i> Basecamp Tanjung</div>
+                    </article>
+                </div>
+            </div>
+        </div>
+        <div id="mainEventTarget" data-date="2026-05-15T09:00:00" class="hidden"></div>
+    </section>
+
+    <!-- Galeri -->
+    <section id="galeri" class="py-20 bg-white dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Galeri</h2>
+                <p class="text-gray-600 dark:text-gray-400">Momen indah dari para traveler di Kerinci</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="space-y-4">
+                    <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=400&q=80" class="w-full rounded-xl hover:opacity-90 cursor-pointer transition transform hover:scale-105" onclick="openLightbox(this.src)">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&q=80" class="w-full rounded-xl hover:opacity-90 cursor-pointer transition transform hover:scale-105" onclick="openLightbox(this.src)">
+                </div>
+                <div class="space-y-4">
+                    <img src="https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?w=400&q=80" class="w-full rounded-xl hover:opacity-90 cursor-pointer transition transform hover:scale-105" onclick="openLightbox(this.src)">
+                    <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=400&q=80" class="w-full rounded-xl hover:opacity-90 cursor-pointer transition transform hover:scale-105" onclick="openLightbox(this.src)">
+                </div>
+                <div class="space-y-4">
+                    <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=400&q=80" class="w-full rounded-xl hover:opacity-90 cursor-pointer transition transform hover:scale-105" onclick="openLightbox(this.src)">
+                    <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=400&q=80" class="w-full rounded-xl hover:opacity-90 cursor-pointer transition transform hover:scale-105" onclick="openLightbox(this.src)">
+                </div>
+                <div class="space-y-4">
+                    <img src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?w=400&q=80" class="w-full rounded-xl hover:opacity-90 cursor-pointer transition transform hover:scale-105" onclick="openLightbox(this.src)">
+                    <img src="https://images.unsplash.com/photo-1426604966848-d7adac402bff?w=400&q=80" class="w-full rounded-xl hover:opacity-90 cursor-pointer transition transform hover:scale-105" onclick="openLightbox(this.src)">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ulasan -->
+    <section id="ulasan" class="py-20 bg-gray-50 dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Apa Kata Mereka?</h2>
+                <p class="text-gray-600 dark:text-gray-400">Testimoni dari para petualang yang sudah merasakan keindahan Kerinci</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="https://i.pravatar.cc/150?img=11" alt="User" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-900 dark:text-white">Ahmad Rizky</h4>
+                            <div class="flex text-yellow-400 text-sm">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300">"Pendakian ke Gunung Kerinci adalah pengalaman terbaik dalam hidup saya. Pemandangan dari puncak sungguh luar biasa indahnya. Guide nya sangat profesional!"</p>
+                    <div class="mt-4 text-sm text-gray-500 dark:text-gray-400">
+                        <i class="fas fa-calendar-alt mr-2"></i>Januari 2024
+                    </div>
+                </div>
+
+                <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="https://i.pravatar.cc/150?img=5" alt="User" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-900 dark:text-white">Sarah Amalia</h4>
+                            <div class="flex text-yellow-400 text-sm">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300">"Air Terjun Telun Berasap sangat memukau! Paket wisatanya lengkap dan harga sangat terjangkau. Recommended banget untuk keluarga."</p>
+                    <div class="mt-4 text-sm text-gray-500 dark:text-gray-400">
+                        <i class="fas fa-calendar-alt mr-2"></i>Desember 2023
+                    </div>
+                </div>
+
+                <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="https://i.pravatar.cc/150?img=3" alt="User" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-900 dark:text-white">Budi Santoso</h4>
+                            <div class="flex text-yellow-400 text-sm">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300">"Peralatan sewanya berkualitas bagus dan terawat. Proses booking mudah dan tim sangat responsif. Pasti akan kembali lagi!"</p>
+                    <div class="mt-4 text-sm text-gray-500 dark:text-gray-400">
+                        <i class="fas fa-calendar-alt mr-2"></i>Februari 2024
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cek Cuaca -->
+    <section id="cuaca" class="py-20 bg-white dark:bg-gray-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Cek Cuaca</h2>
+                <p class="text-gray-600 dark:text-gray-400">Informasi cuaca terkini untuk persiapan perjalanan Anda</p>
+            </div>
+
+            <div class="bg-gradient-to-br from-blue-400 to-blue-600 rounded-3xl p-8 text-white shadow-2xl max-w-4xl mx-auto">
+                <div class="flex flex-col md:flex-row gap-6">
+                    <div class="text-center md:text-left md:w-1/3">
+                        <h3 class="text-3xl font-bold mb-2">Gunung Kerinci</h3>
+                        <p class="text-blue-100">Bendung Air Timur</p>
+                        <div id="weather-temperature" class="text-6xl font-bold mt-4">--°C</div>
+                        <p id="weather-condition" class="text-xl mt-2"><i class="fas fa-spinner fa-spin mr-2"></i>Memuat...</p>
+                        <p id="weather-last-updated" class="text-sm opacity-80 mt-2">Terakhir diperbarui: -</p>
+                    </div>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:w-2/3">
+                        <div class="bg-white/20 backdrop-blur rounded-xl p-4 text-center aspect-square flex flex-col justify-center">
+                            <i class="fas fa-wind text-3xl mb-2"></i>
+                            <div class="text-sm opacity-80">Kecepatan Angin</div>
+                            <div id="weather-wind" class="font-bold text-2xl">-- km/j</div>
+                        </div>
+                        <div class="bg-white/20 backdrop-blur rounded-xl p-4 text-center aspect-square flex flex-col justify-center">
+                            <i class="fas fa-water text-3xl mb-2"></i>
+                            <div class="text-sm opacity-80">Kelembaban</div>
+                            <div id="weather-humidity" class="font-bold text-2xl">--%</div>
+                        </div>
+                        <div class="bg-white/20 backdrop-blur rounded-xl p-4 text-center aspect-square flex flex-col justify-center">
+                            <i class="fas fa-tachometer-alt text-3xl mb-2"></i>
+                            <div class="text-sm opacity-80">Tekanan Udara</div>
+                            <div id="weather-pressure" class="font-bold text-2xl">-- hPa</div>
+                        </div>
+                        <div class="bg-white/20 backdrop-blur rounded-xl p-4 text-center aspect-square flex flex-col justify-center">
+                            <i class="fas fa-sun text-3xl mb-2"></i>
+                            <div class="text-sm opacity-80">Indeks UV</div>
+                            <div id="weather-uv" class="font-bold text-2xl">--</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-8 pt-8 border-t border-white/20">
+                    <h4 class="text-lg font-bold mb-4 text-center">Prediksi 3 Hari ke Depan</h4>
+                    <div id="weather-forecast" class="grid grid-cols-3 gap-2 text-center text-sm">
+                        <div class="bg-white/20 backdrop-blur rounded-xl p-3">
+                            <div class="mb-2 text-sm">-</div>
+                            <i class="fas fa-question text-2xl mb-2"></i>
+                            <div class="font-bold">--°</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8 grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                <div class="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-xl p-4 flex items-center">
+                    <i class="fas fa-exclamation-triangle text-yellow-500 text-2xl mr-4"></i>
+                    <div>
+                        <h4 class="font-bold text-yellow-800 dark:text-yellow-200">Peringatan</h4>
+                        <p class="text-sm text-yellow-700 dark:text-yellow-300">Hujan ringan diperkirakan sore hari</p>
+                    </div>
+                </div>
+                <div class="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl p-4 flex items-center">
+                    <i class="fas fa-check-circle text-green-500 text-2xl mr-4"></i>
+                    <div>
+                        <h4 class="font-bold text-green-800 dark:text-green-200">Aman Mendaki</h4>
+                        <p class="text-sm text-green-700 dark:text-green-300">Kondisi aman untuk pendakian</p>
+                    </div>
+                </div>
+                <div class="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl p-4 flex items-center">
+                    <i class="fas fa-info-circle text-blue-500 text-2xl mr-4"></i>
+                    <div>
+                        <h4 class="font-bold text-blue-800 dark:text-blue-200">Suhu Puncak</h4>
+                        <p class="text-sm text-blue-700 dark:text-blue-300">5°C - 10°C (Bawa jaket tebal)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-20 bg-gray-50 dark:bg-gray-900">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Ikuti Kami di Media Sosial</h2>
+            <p class="text-gray-600 dark:text-gray-400 mb-8">Dapatkan update promo, tips wisata, dan konten inspiratif langsung dari platform resmi kami.</p>
+            <div class="flex flex-col sm:flex-row flex-wrap gap-4 justify-center">
+                <a href="https://www.facebook.com/profile.php?id=61560218714575" target="_blank" rel="noreferrer" class="flex items-center justify-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-semibold transition gap-2">
+                    <i class="fab fa-facebook-f"></i>
+                    Facebook
+                </a>
+                <a href="https://www.tiktok.com/@kerincico" target="_blank" rel="noreferrer" class="flex items-center justify-center px-6 py-3 bg-black hover:bg-gray-900 text-white rounded-full font-semibold transition gap-2">
+                    <i class="fab fa-tiktok"></i>
+                    TikTok
+                </a>
+                <a href="https://www.instagram.com/kerincinco" target="_blank" rel="noreferrer" class="flex items-center justify-center px-6 py-3 bg-gradient-to-r from-pink-500 via-purple-500 to-yellow-400 text-white rounded-full font-semibold transition gap-2">
+                    <i class="fab fa-instagram"></i>
+                    Instagram
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center space-x-2 mb-6">
+                        <div class="w-10 h-10 rounded-lg overflow-hidden bg-white/10 flex items-center justify-center">
+                            <img src="images/logo.png" alt="Kerinci logo" class="w-full h-full object-cover">
+                        </div>
+                        <span class="text-2xl font-bold">Kerinci & Co.</span>
+                    </div>
+                    <p class="text-gray-400 mb-6">Jelajahi keindahan alam Sumatera bersama kami. Pengalaman yang tak terlupakan menanti Anda.</p>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Tautan Cepat</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="#home" class="hover:text-white transition">Beranda</a></li>
+                        <li><a href="#destinasi" class="hover:text-white transition">Destinasi</a></li>
+                        <li><a href="#paket" class="hover:text-white transition">Paket Wisata</a></li>
+                        <li><a href="#sewa" class="hover:text-white transition">Sewa Alat</a></li>
+                        <li><a href="#galeri" class="hover:text-white transition">Galeri</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Bantuan</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition">FAQ</a></li>
+                        <li><a href="#" class="hover:text-white transition">Syarat & Ketentuan</a></li>
+                        <li><a href="#" class="hover:text-white transition">Kebijakan Privasi</a></li>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Kontak</h4>
+                    <ul class="space-y-4 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-primary-500"></i>
+                            <span>Kayu Aro<br>Kerinci, Jambi</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-3 text-primary-500"></i>
+                            <span>+62 345 6789 1023</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-primary-500"></i>
+                            <span>info@wisatakerinci.id</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-clock mr-3 text-primary-500"></i>
+                            <span>Senin - Kamis: 08.00 - 17.00<br>Jumat: 08.00 - 11.30<br>Sabtu: 08.00 - 17.00</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">&copy; 2026 Kerinci & Co. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="fixed inset-0 z-50 hidden bg-black/90 flex items-center justify-center p-4" onclick="closeLightbox()">
+        <img id="lightbox-img" src="" class="max-w-full max-h-full rounded-lg" onclick="event.stopPropagation()">
+        <button class="absolute top-4 right-4 text-white text-4xl hover:text-gray-300" onclick="closeLightbox()">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+
+    <!-- Detail Modal -->
+    <div id="detailModal" class="fixed inset-0 z-50 hidden bg-black/50 flex items-center justify-center p-4 backdrop-blur-sm">
+        <div class="bg-white dark:bg-gray-800 rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6 relative" onclick="event.stopPropagation()">
+            <button onclick="closeDetail()" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">
+                <i class="fas fa-times text-2xl"></i>
+            </button>
+            <div id="modalContent">
+                <!-- Content will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Development Notice Modal -->
+    <div id="devNoticeModal" class="fixed inset-0 z-50 hidden bg-black/70 flex items-center justify-center p-4" onclick="closeDevNotice()">
+        <div class="bg-white rounded-3xl max-w-xl w-full p-8 relative shadow-2xl" onclick="event.stopPropagation()">
+            <button onclick="closeDevNotice()" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
+                <i class="fas fa-times text-2xl"></i>
+            </button>
+            <div class="text-center">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Pemberitahuan</h2>
+                <p class="text-gray-600 mb-6 leading-relaxed">
+                    Website ini masih dalam tahap development. Beberapa fungsi mungkin belum lengkap, dan konten dapat terus diperbarui.
+                </p>
+                <button onclick="closeDevNotice()" class="px-6 py-3 bg-primary-600 text-white rounded-full font-semibold hover:bg-primary-700 transition">
+                    Tutup
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-8 right-8 bg-primary-600 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center opacity-0 transition-opacity duration-300 hover:bg-primary-700 z-40" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Main Application Script -->
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
