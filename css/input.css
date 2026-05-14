@@ -273,3 +273,7 @@ html {
 .dark {
     color-scheme: dark;
 }
+
+.unwanted-element {
+    display: none;
+}
